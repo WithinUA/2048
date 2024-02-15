@@ -1,0 +1,77 @@
+﻿<Application x:Class="_2048.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:_2048"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Label" x:Key="TopButton">
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="InnerButton">
+            <Setter Property="Background" Value="#FF7E7E7E"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="CornerRadius" Value="50"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="2but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFCAD3B8"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="4but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFD9DD8B"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="8but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFDDC18B"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="16but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFDDAB8B"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="32but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFDD968B"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="64but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFE69285"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="128but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFEA897A"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="256but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFEB7A69"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="512but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFEB6753"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="1024but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFEA5740"/>
+        </Style>
+
+        <Style TargetType="Border" x:Key="2048but" BasedOn="{StaticResource InnerButton}">
+            <Setter Property="Background" Value="#FFED462C"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="ButtonLabel">
+            <Setter Property="FontSize" Value="22"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="WhiteLabel" BasedOn="{StaticResource ButtonLabel}">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        
+    </Application.Resources>
+</Application>
