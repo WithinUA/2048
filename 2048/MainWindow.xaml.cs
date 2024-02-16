@@ -21,6 +21,8 @@ namespace _2048
         int[,] arr = new int[4, 4];
         Random rand = new();
         int score = 0, high_score = 0;
+        MediaPlayer player = new();
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +30,15 @@ namespace _2048
             LoadHighScore();
             DisplayBadges();
             high_score_label.Content = high_score;
+            player.Open(new Uri("Herknungr.mp3", UriKind.Relative));
+            player.MediaEnded += Player_MediaEnded;
+            player.Play();
+        }
+
+        private void Player_MediaEnded(object? sender, EventArgs e)
+        {
+            player.Position = TimeSpan.Zero;
+            player.Play();
         }
 
         private void LoadHighScore()
@@ -190,6 +201,11 @@ namespace _2048
                 MessageBox.Show($"You win! Your score is {score}");
             score = 0;
             score_label.Content = 0;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            player.Stop();
         }
 
         private void make_move(object sender, KeyEventArgs e)
